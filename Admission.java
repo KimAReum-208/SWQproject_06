@@ -16,5 +16,19 @@ public class Admission
         scanner.close();
     }
     public void AdmissionCalculator(int age){
+        if (age >= 16){
+            System.out.println("성인 요금은 2000원 입니다.");
+            
+        }
+        else if (age >= 7){
+            System.out.println("초등학생 및 중학생의 요금은 900원입니다.");
+            return 900;
+        }
+        else if (age >= 4){
+         return 400;   
+        }
+        else if(age < 4){
+         return 0;   
+        }
     }
 }
