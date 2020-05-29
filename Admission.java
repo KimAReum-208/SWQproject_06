@@ -15,20 +15,20 @@ public class Admission
         int age = scanner.nextInt();
         scanner.close();
     }
-    public void AdmissionCalculator(int age){
+    public int AdmissionCalculator(int age){
+        // 나이별로 입장료를 반환해 주는 메소드
         if (age >= 16){
-            System.out.println("성인 요금은 2000원 입니다.");
-            
+            return 2000;
         }
-        else if (age >= 7){
-            System.out.println("초등학생 및 중학생의 요금은 900원입니다.");
+        else if (age < 16 && age >= 7){
             return 900;
         }
-        else if (age >= 4){
-         return 400;   
+        else if (age < 7 && age >= 4){
+            return 400;
         }
-        else if(age < 4){
-         return 0;   
+        else{
+            return 0;
         }
     }
+    
 }
