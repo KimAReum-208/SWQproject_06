@@ -18,6 +18,8 @@ public class Admission
         System.out.print("나이를 입력해 주세요.");
         int age = scanner.nextInt();
         scanner.close();
+        int fee = AdmissionCalculator(age);
+        
     }
     
     /**
@@ -26,7 +28,7 @@ public class Admission
      * @param age 나이
      * @return fee 입장료 반환
      */
-    public String AdmissionCalculator(int age){      
+    public static int AdmissionCalculator(int age){      
         String fee;
         if(age >=0 && age <= 3){
             fee = "0원";
@@ -44,5 +46,6 @@ public class Admission
         else{
             fee = "error";
         }
+        return fee;
     }
 }
