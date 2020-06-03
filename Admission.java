@@ -33,7 +33,7 @@ public class Admission
         if(age >=0 && age <= 3){
             fee = 0;
         }
-        else if(age >= 4 && age <= 7){
+        else if(age >= 4 && age <= 6){
             fee = 400;
         }
         else if(age >= 7 && age <= 15){
