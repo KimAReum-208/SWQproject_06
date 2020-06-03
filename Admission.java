@@ -7,6 +7,10 @@ import java.util.Scanner;
  */
 public class Admission
 {
+    /**
+     * 나이를 입력받는 메소드
+     * 
+     */
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         
@@ -15,20 +19,28 @@ public class Admission
         int age = scanner.nextInt();
         scanner.close();
     }
-    public int AdmissionCalculator(int age){
-        // 나이별로 입장료를 반환해 주는 메소드
+    
+    /**
+     * 나이를 입력받으면 입장료를 계산하여 반환하는 메소드
+     * 
+     * @param age 나이
+     * @return fee 입장료 반환
+     */
+    public int AdmissionCalculator(int age){      
+        int fee = 0;
         if (age >= 16){
-            return 2000;
+            fee = 2000;
         }
         else if (age < 16 && age >= 7){
-            return 900;
+            fee = 900;
         }
         else if (age < 7 && age >= 4){
-            return 400;
+            fee = 400;
         }
         else{
-            return 0;
+            fee = 0;
         }
+        return fee;
     }
     
 }
