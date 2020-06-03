@@ -2,13 +2,13 @@ import java.util.Scanner;
 /**
  * ABC수족관 입장료 처리 프로그램
  * 
- * @author (2017315002 김아름, 2017315038 이수정, 2018315051 키타야마 요시카) 
+ * @author (2017315002 김아름, 2017315038 이수정, 2018315051  야마모토 요시카) 
  * @version (2019.05.29)
  */
 public class Admission
 {
     /**
-     * 나이를 입력받는 메소드
+     * 나이를 입력받고 입장료를 출력해 주는 메인 메소드
      * 
      */
     public static void main(String[] args){
