@@ -26,21 +26,23 @@ public class Admission
      * @param age 나이
      * @return fee 입장료 반환
      */
-    public int AdmissionCalculator(int age){      
-        int fee = 0;
-        if (age >= 16){
-            fee = 2000;
+    public String AdmissionCalculator(int age){      
+        String fee;
+        if(age >=0 && age <= 3){
+            fee = "0원";
         }
-        else if (age < 16 && age >= 7){
-            fee = 900;
+        else if(age >= 4 && age <= 7){
+            fee = "400원";
         }
-        else if (age < 7 && age >= 4){
-            fee = 400;
+        else if(age >= 7 && age <= 15){
+            fee = "900원";
+        }
+        
+        else if(age >= 16 && age<=130){
+            fee = "2000원";
         }
         else{
-            fee = 0;
+            fee = "error";
         }
-        return fee;
     }
-    
 }
