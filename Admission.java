@@ -19,7 +19,7 @@ public class Admission
         int age = scanner.nextInt();
         scanner.close();
         int fee = AdmissionCalculator(age);
-        
+        System.out.print("입장료는" + fee + "원입니다.");
     }
     
     /**
@@ -29,22 +29,19 @@ public class Admission
      * @return fee 입장료 반환
      */
     public static int AdmissionCalculator(int age){      
-        String fee;
+        int fee = 0;
         if(age >=0 && age <= 3){
-            fee = "0원";
+            fee = 0;
         }
         else if(age >= 4 && age <= 7){
-            fee = "400원";
+            fee = 400;
         }
         else if(age >= 7 && age <= 15){
-            fee = "900원";
+            fee = 900;
         }
         
-        else if(age >= 16 && age<=130){
-            fee = "2000원";
-        }
         else{
-            fee = "error";
+            fee = 2000;
         }
         return fee;
     }
