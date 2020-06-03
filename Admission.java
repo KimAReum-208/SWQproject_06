@@ -15,11 +15,11 @@ public class Admission
         Scanner scanner = new Scanner(System.in);
         
         //나이를 입력받아 age에 저장한다
-        System.out.print("나이를 입력해 주세요.");
+        System.out.print("나이를 입력해 주세요. >> ");
         int age = scanner.nextInt();
         scanner.close();
         int fee = AdmissionCalculator(age);
-        System.out.print("입장료는" + fee + "원입니다.");
+        System.out.println("입장료는 " + fee + "원입니다.");
     }
     
     /**
@@ -39,9 +39,11 @@ public class Admission
         else if(age >= 7 && age <= 15){
             fee = 900;
         }
-        
-        else{
+        else if(age >=16 && age <= 130){
             fee = 2000;
+        }
+        else{
+            fee = 999999;
         }
         return fee;
     }
